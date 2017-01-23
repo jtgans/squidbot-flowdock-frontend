@@ -1,0 +1,10 @@
+FROM jtgans/picluster-cross:latest
+
+RUN apk update && \
+apk upgrade && \
+apk add bash && \
+rm -rf /var/cache/apk/*
+
+COPY squidbot-flowdock-frontend-rpi /usr/bin/squidbot-flowdock-frontend
+
+CMD ["/usr/bin/squidbot-flowdock-frontend"]
