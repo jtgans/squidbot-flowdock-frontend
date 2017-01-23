@@ -1,6 +1,6 @@
-SRCS := $(wildcard *.go brain/*.go)
+SRCS := $(wildcard *.go frontend/*.go)
 
-all: squidbot-flowdock-frontend-rpi squidbot-flowdock-frontend
+all: squidbot-flowdock-frontend
 
 squidbot-flowdock-frontend-rpi: $(SRCS)
 	GOOS=linux GOARCH=arm go build -v
