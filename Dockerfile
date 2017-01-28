@@ -6,4 +6,5 @@ rm -rf /var/cache/apt/*
 
 COPY squidbot-flowdock-frontend /usr/bin/squidbot-flowdock-frontend
 
-CMD ["/usr/bin/squidbot-flowdock-frontend"]
+ENTRYPOINT ["/usr/bin/squidbot-flowdock-frontend"]
+CMD [ "--help" ]
